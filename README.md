@@ -12,7 +12,7 @@
 ### 注意:
 
 - 所以运行的时候可以加`--rm`停止以后自动删除容器
-
+- 运行时带上`--shm-size`可以开大点
 
 ### docker命令行设置：
 
@@ -24,11 +24,11 @@
 2. 
 - 创建并运行 qq容器(创建并运行以后不需要执行第三步运行)
  
- `docker run --name chromium -p 5800:5800 -p 5900:5900 -d annat/chromium`
+ `docker run --name chromium -p 5800:5800 -p 5900:5900 --shm-size=2048m -d annat/chromium`
 
 - 只创建容器
 
- `docker create --name chromium -p 5800:5800 -p 5900:5900 -d annat/chromium`
+ `docker create --name chromium -p 5800:5800 -p 5900:5900 --shm-size=2048m -d annat/chromium`
 
 3. 运行
 
